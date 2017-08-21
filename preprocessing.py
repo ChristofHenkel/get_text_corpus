@@ -40,13 +40,13 @@ cfg = Config()
 
 target = args.target
 target += '.' + args.Lang + '.'
-if args.rm_punctuation:
+if args.punctuation:
     target += 'p'
 if args.lowercase:
     target += 'l'
-if args.rm_stopwords:
+if args.stopwords:
     target += 's'
-if args.rm_stopwords:
+if args.Sentenize:
     target += 'S'
 target += '.corpus'
 
