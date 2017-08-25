@@ -12,6 +12,6 @@ for item in args.years:
     url = 'http://www.statmt.org/wmt14/training-monolingual-news-crawl/news.' + item + '.' + args.lang + '.shuffled.gz'
     print('Downloading',url.split('/')[-1])
     filename = wget.download(url)
-    os.system("gzip - d " + filename)
+    os.system("gzip -d " + filename)
     os.remove(filename)
 

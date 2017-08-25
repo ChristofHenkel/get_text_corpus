@@ -33,7 +33,7 @@ logging.basicConfig(stream=sys.stdout, format='%(asctime)s : %(levelname)s : %(m
 
 class Config:
     punctuation_tokens = ['.', '..', '...', ',', ';', ':', '(', ')', '"', '\'', '[', ']', '{', '}', '?', '!', '-', u'–',
-                          '+', '*', '--', '\'\'', '``', "'"]
+                          '+', '*', '--', '\'\'', '``', "'",'“','”']
     punctuation = '?.!/;:()&+'
 
 cfg = Config()
@@ -110,7 +110,7 @@ for k, fn in enumerate(fns):
                 if len(words) > 1:
                     output.write(' '.join(words) + '\n')
                         # process each sentence
-            if i % 1000 == 0:
+            if i % 10000 == 0:
                 logging.info('file %s of %s : preprocessing sentence %s ',k+1, num_files, i)
             i += 1
 output.close()
